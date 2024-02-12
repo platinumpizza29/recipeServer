@@ -28,7 +28,7 @@ COPY prisma ./prisma
 # RUN npm run build # Replace with your build command
 
 # Expose the port (if needed)
-EXPOSE ${PORT} (optional)
+EXPOSE 3000
 
 # Start command
 CMD ["bun", "start"]
