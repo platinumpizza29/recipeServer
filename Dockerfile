@@ -31,7 +31,7 @@ COPY prisma ./prisma
 EXPOSE 3000
 
 # Start command
-CMD ["bun", "start"]
+CMD ["bun", "run", "start"]
 
 # Recommendations:
 # - For production, replace "development" with "production" in your .env file (if applicable).
