@@ -1,7 +1,12 @@
 import { Elysia } from "elysia";
+import {cors} from "@elysiajs/cors";
+import recipeRoute from "./routes/recipeRoute";
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+const app = new Elysia()
+app.use(cors())
+app.use(recipeRoute)
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+const port = process.env.PORT || 3000
+app.listen(port, ()=>{
+    console.log("Server started on port", port)
+})
