@@ -1,8 +1,5 @@
-# Use specific Bun version (recommended)
-ARG BUN_VERSION=1.1.4
-
 # Base image with Bun
-FROM oven/bun:${BUN_VERSION}
+FROM oven/bun
 
 # Working directory
 WORKDIR /app
